@@ -27,7 +27,7 @@ motor~=2.5.1
 python-multipart==0.0.5
 pymongo
 uvicorn==0.13.1
-starlette==0.13.6
+starlette==0.19.1
 sendgrid~=6.9.6
 arrow~=1.2.2
 Jinja2~=3.1.2

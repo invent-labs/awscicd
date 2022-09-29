@@ -28,8 +28,8 @@ jobs:
       # Step 6
       - name: Copy Dependencies
         run: |
-          COPY ./backend/app/main.py ./backend/venv/lib/python3.7/site-packages/main.py  
-          COPY ./backend/app ./backend/venv/lib/python3.7/site-packages/app           
+          cp ./backend/app/main.py ./backend/venv/lib/python3.7/site-packages/main.py  
+          cp ./backend/app ./backend/venv/lib/python3.7/site-packages/app           
           
 
       # Step 7

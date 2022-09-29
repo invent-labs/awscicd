@@ -14,7 +14,7 @@ py==1.10.0
 pyparsing==2.4.7
 requests==2.25.0
 toml==0.10.2
-typing-extensions==3.7.4.3
+typing-extensions
 urllib3==1.26.2
 python-jose==3.3.0
 passlib[bcrypt]~=1.7.4
@@ -26,7 +26,7 @@ pytest==6.2.5
 motor~=2.5.1
 python-multipart==0.0.5
 pymongo
-uvicorn==0.13.1
+uvicorn
 starlette==0.19.1
 sendgrid~=6.9.6
 arrow~=1.2.2

@@ -24,7 +24,7 @@ jobs:
       - name: Activate and Install Depencies into Virtual env
         run: cd ./backend && python -m venv venv && source venv/bin/activate &&
           pip3 install -r requirements.txt
-        
+
       # Step 7
       - name: Create Zipfile archive of Dependencies
         run: |
@@ -33,7 +33,7 @@ jobs:
 
       # Step 8
       - name: Add App to Zip file
-        run: cd ./backend/app && zip -g ../api.zip -r .
+        run: cd ./backend/app && zip -g ../../api.zip -r .
 
       # Step 9
       - name: Upload zip file artifact

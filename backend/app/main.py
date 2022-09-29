@@ -8,7 +8,7 @@ from fastapi.security import OAuth2PasswordBearer
 from passlib.context import CryptContext
 from fastapi.staticfiles import StaticFiles
 
-from router import auth, users, restaurants, restaurants_customer
+from app.router import auth, users, restaurants, restaurants_customer
 from mangum import Mangum
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")

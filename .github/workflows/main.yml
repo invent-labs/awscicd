@@ -28,6 +28,7 @@ jobs:
       # Step 6
       - name: Copy Dependencies
         run: |
+          mkdir ./backend/venv/lib/python3.7/site-packages/app
           cp ./backend/app/main.py ./backend/venv/lib/python3.7/site-packages/main.py  
           cp -R ./backend/app/* ./backend/venv/lib/python3.7/site-packages/app           
           
@@ -35,7 +36,7 @@ jobs:
       # Step 7
       - name: Create Zipfile archive of Dependencies
         run: |
-          cd ./backend/venv/lib/python3.7/site-packages          
+          cd ./backend/venv/lib/python3.7/site-packages                     
           zip -r9 ../../../../api.zip .
 
       # Step 9

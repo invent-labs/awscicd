@@ -18,7 +18,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.10
+          python-version: 3.9
           architecture: x64
       # Step 5
       - name: Activate and Install Depencies into Virtual env
@@ -28,15 +28,15 @@ jobs:
       # Step 6
       - name: Copy Dependencies
         run: |
-          mkdir ./backend/venv/lib/python3.10/site-packages/app
-          cp ./backend/app/main.py ./backend/venv/lib/python3.10/site-packages/main.py  
-          cp -R ./backend/app/* ./backend/venv/lib/python3.10/site-packages/app           
+          mkdir ./backend/venv/lib/python3.9/site-packages/app
+          cp ./backend/app/main.py ./backend/venv/lib/python3.9/site-packages/main.py  
+          cp -R ./backend/app/* ./backend/venv/lib/python3.9/site-packages/app           
           
 
       # Step 7
       - name: Create Zipfile archive of Dependencies
         run: |
-          cd ./backend/venv/lib/python3.10/site-packages                     
+          cd ./backend/venv/lib/python3.9/site-packages                     
           zip -r9 ../../../../api.zip .
 
       # Step 9

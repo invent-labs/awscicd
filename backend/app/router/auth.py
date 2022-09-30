@@ -30,7 +30,7 @@ router = APIRouter(
     }},
 )
 
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+pwd_context = CryptContext(schemes=["md5_crypt"])
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/business/token")
 

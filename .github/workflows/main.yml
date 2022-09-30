@@ -22,8 +22,8 @@ jobs:
           architecture: x64
       # Step 5
       - name: Activate and Install Depencies into Virtual env
-        run: cd ./backend && python -m venv venv && source venv/bin/activate &&
-          pip install passlib && pip install bcrypt && pip install -r requirements.txt
+        run: cd ./backend && rm -rf venv && python -m venv venv && source venv/bin/activate &&
+          pip install -r requirements.txt
 
       # Step 6
       - name: Copy Dependencies

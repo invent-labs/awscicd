@@ -50,7 +50,7 @@ async def list_role(user: object = Depends(get_current_active_user)):
     return roles
 
 
-@router.get("/", description="List all users")
+@router.get("", description="List all users")
 async def list_users(user: object = Depends(get_current_active_user)):
     company_id = user.get("company_id")
     associated_users = await users_collection.find({

@@ -41,7 +41,7 @@ OTP_EXPIRE_MINUTES = 5
 
 
 def verify_password(plain_password, hashed_password):
-    return True
+    return pwd_context.verify(plain_password, hashed_password)
 
 
 def get_password_hash(password):
@@ -120,7 +120,7 @@ class APIResponseModel(BaseModel):
     message: Optional[str]
 
 
-@router.get("/", description="Home")
+@router.get("", description="Home")
 async def homepage():
     response = APIResponseModel(
         status=True,

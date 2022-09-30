@@ -94,7 +94,7 @@ async def get_users(user_id: str,
     return response
 
 
-@router.post("/", description="Add a user")
+@router.post("", description="Add a user")
 async def add_user(request: AddUserModel = Body(...),
                    user: object = Depends(get_current_active_user)):
     if user.get('role') != UserRole.super_admin:
